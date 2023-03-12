@@ -31,3 +31,4 @@ SQLite
 <a href="https://www.flaticon.com/free-icons/creation" title="creation icons">Creation icons created by Freepik - Flaticon</a>
 pip install django-cloudinary-storage
 pip install Pillow
+pip install djangorestframework
