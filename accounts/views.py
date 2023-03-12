@@ -28,17 +28,3 @@ class AccountDetail(RetrieveUpdateAPIView):
     permission_classes = [OwnerOrReadOnly]
     serializer_class = AccountsSerializer
     queryset = Account.objects.all()
-
-    # filter_backends = [filters.OrderingFilter]
-
-    # queryset = Account.objects.annotate(
-    #     posts_count=Count('owner__post', distinct=True),
-    #     accounts_following_count=Count(
-    #         'owner__account_followed', distinct=True),
-    #     account_followed_count=Count('owner__account_followed', distinct=True)
-    # ).order_by('-registration_date')
-    # ordering_fields = [
-    # 'posts_count',
-    # 'accounts_following_count',
-    # 'account_followed_count',
-    # ]
