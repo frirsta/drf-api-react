@@ -1,14 +1,14 @@
 from django.db.models import Count
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import permissions, filters
-from rest_framework.generics import ListAPIView, RetrieveUpdateAPIView
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateAPIView
 from rest_framework.response import Response
 from drf_api.permissions import OwnerOrReadOnly
 from .models import Account
 from .serializers import AccountsSerializer
 
 
-class AccountList(ListAPIView):
+class AccountList(ListCreateAPIView):
     """
     Displays a list of all the accounts and their information.
     Filterset_fields Can find who follows a specific user.
