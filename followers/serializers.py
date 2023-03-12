@@ -5,7 +5,8 @@ from .models import Followers
 
 class FollowersSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
-    account_followed_name = serializers.ReadOnlyField(source='account_followed.username')
+    account_followed_name = serializers.ReadOnlyField(
+        source='account_followed.username')
 
     class Meta:
         model = Followers

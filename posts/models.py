@@ -10,11 +10,11 @@ class Post(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now=True)
     caption = models.TextField(max_length=250)
-    post_image = models.ImageField(upload_to='react/',
-                                             default='default_post')
+    post_image = models.ImageField(
+        upload_to='react/', default="default_post")
 
     class Meta:
         ordering = ['-created_date']
 
     def __str__(self):
-        return f'{self.id} {self.post_image} {self.caption}'
+        return f'{self.id} {self.caption}'

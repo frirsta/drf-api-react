@@ -1,13 +1,13 @@
 from django.db.models import Count
 from rest_framework import permissions, filters
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateAPIView
+from rest_framework.generics import ListAPIView, RetrieveUpdateAPIView
 from rest_framework.response import Response
 from drf_api.permissions import OwnerOrReadOnly
 from .models import BusinessProfile
 from .serializers import BusinessProfileSerializer
 
 
-class BusinessProfileList(ListCreateAPIView):
+class BusinessProfileList(ListAPIView):
     """
     Displays a list of all the Business Profiles and their information.
     Filterset_fields Can find who follows a specific user.
@@ -15,7 +15,6 @@ class BusinessProfileList(ListCreateAPIView):
     followed by a specific user.
     """
     serializer_class = BusinessProfileSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = BusinessProfile.objects.all()
     filter_backends = [
         filters.SearchFilter,

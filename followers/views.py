@@ -8,7 +8,7 @@ from .serializers import FollowersSerializer
 
 class FollowersList(ListCreateAPIView):
     """
-    Displays a list of all the Followerss and their information.
+    Displays a list of all the Followers and their information.
     """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Followers.objects.all()
