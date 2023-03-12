@@ -147,8 +147,8 @@ pip freeze --local > requirements.txt
 <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Freepik - Flaticon</a>
 <a href="https://www.flaticon.com/free-icons/picture" title="picture icons">Picture icons created by Chanut - Flaticon</a>
 https://www.django-rest-framework.org/api-guide/filtering/#searchfilter
-<br>
 <a href="https://www.flaticon.com/free-icons/creation" title="creation icons">Creation icons created by Freepik - Flaticon</a>
 
+<br>
 
 # Acknowledgement
