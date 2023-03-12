@@ -15,17 +15,16 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Post',
+            name='Followers',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('created_date', models.DateTimeField(auto_now_add=True)),
-                ('updated_date', models.DateTimeField(auto_now=True)),
-                ('caption', models.TextField(max_length=250)),
-                ('post_image', models.ImageField(default='default_post', upload_to='react/')),
-                ('owner', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('account_followed', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='account_followed', to=settings.AUTH_USER_MODEL)),
+                ('owner', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='account_following', to=settings.AUTH_USER_MODEL)),
             ],
             options={
                 'ordering': ['-created_date'],
+                'unique_together': {('owner', 'account_followed')},
             },
         ),
     ]
