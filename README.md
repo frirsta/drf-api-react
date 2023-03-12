@@ -32,3 +32,6 @@ SQLite
 pip install django-cloudinary-storage
 pip install Pillow
 pip install djangorestframework
+pip3 install dj-rest-auth==2.1.9
+pip3 install gunicorn django-cors-headers
+pip freeze --local > requirements.txt
