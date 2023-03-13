@@ -208,6 +208,5 @@ PHONENUMBER_DEFAULT_FORMAT = "INTERNATIONAL"
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "https://drf-api-frirsta.herokuapp.com/",
     "https://3000-frirsta-reactfrontend-1sys29bn52y.ws-eu90.gitpod.io",
 ]
