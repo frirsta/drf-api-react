@@ -15,6 +15,7 @@ class AccountList(ListAPIView):
     The filterset_fields can also find what accounts are
     followed by a specific user.
     """
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Account.objects.annotate(
         posts_count=Count('owner__post', distinct=True),
         accounts_following_count=Count(

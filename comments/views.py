@@ -15,6 +15,7 @@ class CommentList(ListCreateAPIView):
     The filterset_fields can also find what comments have been made
     on a specific post.
     """
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Comment.objects.annotate(
         comment_count=Count('owner__comment', distinct=True),
     ).order_by('-created_date')

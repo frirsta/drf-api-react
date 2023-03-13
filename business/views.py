@@ -14,6 +14,7 @@ class BusinessProfileList(ListAPIView):
     The filterset_fields can also find what Business Profiles are
     followed by a specific user.
     """
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = BusinessProfileSerializer
     queryset = BusinessProfile.objects.all()
     filter_backends = [
