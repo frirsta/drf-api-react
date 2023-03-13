@@ -1,10 +1,7 @@
 from rest_framework import permissions
 
 
-class OwnerOrReadOnly(permissions.BasePermission):
-    """
-    Allows owners to edit their own account.
-    """
+class IsOwnerOrReadOnly(permissions.BasePermission):
     def has_object_permission(self, request, view, obj):
         if request.method in permissions.SAFE_METHODS:
             return True

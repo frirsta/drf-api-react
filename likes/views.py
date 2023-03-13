@@ -1,14 +1,10 @@
-from django.db.models import Count
-from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import permissions, filters
-from rest_framework.generics import (
-    ListCreateAPIView, RetrieveDestroyAPIView)
-from drf_api.permissions import OwnerOrReadOnly
+from rest_framework import permissions, generics
+from drf_api.permissions import IsOwnerOrReadOnly
 from .models import Like
 from .serializers import LikeSerializer
 
 
-class LikeList(ListCreateAPIView):
+class LikeList(generics.ListCreateAPIView):
     """
     Displays a list of all the likes and their information.
     The filterset_fields can find likes made by a specific user
@@ -16,26 +12,17 @@ class LikeList(ListCreateAPIView):
     on a specific post.
     """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    queryset = Like.objects.annotate(
-        like_count=Count('owner__like', distinct=True),
-    ).order_by('-created_date')
-    serializer_class = LikeSerializer
-    filter_backends = [
-        DjangoFilterBackend]
-    filterset_fields = [
-        'post',
-        'owner__like__owner__account'
-        ]
+    queryset = Like.objects.all()
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
 
 
-class LikeDetail(RetrieveDestroyAPIView):
+class LikeDetail(generics.RetrieveDestroyAPIView):
     """
     Display Like detail.
     The owner of the Like can delete their Like here.
     """
-    permission_classes = [OwnerOrReadOnly]
+    permission_classes = [IsOwnerOrReadOnly]
     queryset = Like.objects.all()
     serializer_class = LikeSerializer

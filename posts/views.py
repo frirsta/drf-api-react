@@ -1,13 +1,11 @@
 from django.db.models import Count
-from rest_framework import permissions, filters
-from rest_framework.generics import (
-    ListCreateAPIView, RetrieveUpdateDestroyAPIView)
-from drf_api.permissions import OwnerOrReadOnly
+from rest_framework import permissions, filters, generics
+from drf_api.permissions import IsOwnerOrReadOnly
 from .models import Post
 from .serializers import PostsSerializer
 
 
-class PostList(ListCreateAPIView):
+class PostList(generics.ListCreateAPIView):
     """
     Displays a list of all the posts and their information.
     """
@@ -31,12 +29,12 @@ class PostList(ListCreateAPIView):
         serializer.save(owner=self.request.user)
 
 
-class PostDetail(RetrieveUpdateDestroyAPIView):
+class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     Display post detail.
     The owner of the post can edit and delete their post here.
     """
-    permission_classes = [OwnerOrReadOnly]
+    permission_classes = [IsOwnerOrReadOnly]
     queryset = Post.objects.annotate(
         likes_count=Count('likes', distinct=True),
         comment_count=Count('comment', distinct=True)

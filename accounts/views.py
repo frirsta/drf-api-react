@@ -1,21 +1,18 @@
 from django.db.models import Count
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import permissions, filters
-from rest_framework.generics import ListAPIView, RetrieveUpdateAPIView
-from rest_framework.response import Response
-from drf_api.permissions import OwnerOrReadOnly
+from rest_framework import filters, generics
+from drf_api.permissions import IsOwnerOrReadOnly
 from .models import Account
 from .serializers import AccountsSerializer
 
 
-class AccountList(ListAPIView):
+class AccountList(generics.ListAPIView):
     """
     Displays a list of all the accounts and their information.
     Filterset_fields Can find who follows a specific user.
     The filterset_fields can also find what accounts are
     followed by a specific user.
     """
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Account.objects.annotate(
         posts_count=Count('owner__post', distinct=True),
         accounts_following_count=Count(
@@ -39,12 +36,12 @@ class AccountList(ListAPIView):
         ]
 
 
-class AccountDetail(RetrieveUpdateAPIView):
+class AccountDetail(generics.RetrieveUpdateAPIView):
     """
     Display account detail.
     The owner of the account can edit and delete their account here.
     """
-    permission_classes = [OwnerOrReadOnly]
+    permission_classes = [IsOwnerOrReadOnly]
     queryset = Account.objects.annotate(
         posts_count=Count('owner__post', distinct=True),
         accounts_following_count=Count(
