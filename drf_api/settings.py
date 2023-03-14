@@ -46,6 +46,7 @@ JWT_AUTH_SECURE = True
 JWT_AUTH_COOKIE = 'my-app-auth'
 JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
 JWT_AUTH_SAMESITE = 'None'
+REST_USE_JWT = True
 
 REST_AUTH_SERIALIZERS = {
     'USER_DETAILS_SERIALIZER': 'drf_api.serializers.CurrentUserSerializer'}
@@ -57,8 +58,8 @@ REST_AUTH_SERIALIZERS = {
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = 'DEV' in os.environ
-DEBUG = False
+DEBUG = 'DEV' in os.environ
+# DEBUG = False
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
@@ -204,4 +205,4 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 PHONENUMBER_DEFAULT_FORMAT = "INTERNATIONAL"
 
-CSRF_TRUSTED_ORIGINS = ['https://3000-frirsta-reactfrontend-1sys29bn52y.ws-eu90.gitpod.io/']
+CSRF_TRUSTED_ORIGINS = ['https://3000-frirsta-reactfrontend-4gjgf4f9qxp.ws-eu90.gitpod.io/']
