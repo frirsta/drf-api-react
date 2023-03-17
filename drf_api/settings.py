@@ -206,4 +206,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 PHONENUMBER_DEFAULT_FORMAT = "INTERNATIONAL"
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://3000-frirsta-reactfrontend-1rfjfheb8xp.ws-eu90.gitpod.io/']
+    'https://3000-frirsta-reactfrontend-4r9zj7rrcmz.ws-eu90.gitpod.io/']
