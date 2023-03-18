@@ -101,8 +101,8 @@
 <br>
 
 # Technologies used
-pip install Pillow
-pip install django-cloudinary-storage
+
+
 django-admin startproject PROJ_NAME .
 djangorestframework django-cors-headers
 pip freeze > requirements.txt
@@ -122,11 +122,9 @@ pip install django-rest-auth[with_social]
 
 
 SQLite
-pip install django-cloudinary-storage
-pip install Pillow
-pip install djangorestframework
+
 pip3 install dj-rest-auth==2.1.9
-pip3 install gunicorn django-cors-headers
+
 pip freeze --local > requirements.txt
 
 
