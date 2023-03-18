@@ -204,6 +204,3 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 PHONENUMBER_DEFAULT_FORMAT = "INTERNATIONAL"
-
-CSRF_TRUSTED_ORIGINS = [
-    'https://3000-frirsta-reactfrontend-utuw74suzgt.ws-eu90.gitpod.io/']
