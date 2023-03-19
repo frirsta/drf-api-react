@@ -16,6 +16,9 @@ class PostList(generics.ListCreateAPIView):
     ).order_by('-created_date')
     serializer_class = PostsSerializer
     filter_backends = [filters.OrderingFilter, filters.SearchFilter]
+    filterset_fields = [
+        'likes__owner__account'
+    ]
     ordering_fields = [
         'likes_count',
         'comments_count',
