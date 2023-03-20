@@ -48,7 +48,7 @@ class PostsSerializer(serializers.ModelSerializer):
     def get_saved_id(self, obj):
         user = self.context['request'].user
         if user.is_authenticated:
-            saved = Like.objects.filter(
+            saved = SavePost.objects.filter(
                 owner=user, post=obj
             ).first()
             return saved.id if saved else None
