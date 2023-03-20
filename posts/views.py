@@ -19,7 +19,7 @@ class PostList(generics.ListCreateAPIView):
     filter_backends = [filters.OrderingFilter, filters.SearchFilter]
     filterset_fields = [
         'likes__owner__account',
-        'saved__owner__account'
+        'saved__owner__account',
     ]
     ordering_fields = [
         'likes_count',
