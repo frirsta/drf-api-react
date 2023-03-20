@@ -1,4 +1,5 @@
 from django.db.models import Count
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import permissions, filters, generics
 from drf_api.permissions import IsOwnerOrReadOnly
 from .models import Post
@@ -16,7 +17,9 @@ class PostList(generics.ListCreateAPIView):
         comments_count=Count('comment', distinct=True)
     ).order_by('-created_date')
     serializer_class = PostsSerializer
-    filter_backends = [filters.OrderingFilter, filters.SearchFilter]
+    filter_backends = [filters.OrderingFilter,
+                       filters.SearchFilter, DjangoFilterBackends,
+                       ]
     filterset_fields = [
         'likes__owner__account',
         'saved__owner__account',
@@ -25,7 +28,7 @@ class PostList(generics.ListCreateAPIView):
         'likes_count',
         'saved_count',
         'comments_count',
-        ]
+    ]
     search_fields = [
         'owner__username',
         'caption',
@@ -52,7 +55,7 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
         'likes_count',
         'saved_count',
         'comments_count',
-        ]
+    ]
     search_fields = [
         'owner__username',
         'caption',
