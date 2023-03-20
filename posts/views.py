@@ -12,15 +12,18 @@ class PostList(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Post.objects.annotate(
         likes_count=Count('likes', distinct=True),
+        saved_count=Count('saved', distinct=True),
         comments_count=Count('comment', distinct=True)
     ).order_by('-created_date')
     serializer_class = PostsSerializer
     filter_backends = [filters.OrderingFilter, filters.SearchFilter]
     filterset_fields = [
-        'likes__owner__account'
+        'likes__owner__account',
+        'saved__owner__account'
     ]
     ordering_fields = [
         'likes_count',
+        'saved_count',
         'comments_count',
         ]
     search_fields = [
@@ -40,12 +43,14 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [IsOwnerOrReadOnly]
     queryset = Post.objects.annotate(
         likes_count=Count('likes', distinct=True),
+        saved_count=Count('saved', distinct=True),
         comments_count=Count('comment', distinct=True)
     ).order_by('-created_date')
     serializer_class = PostsSerializer
     filter_backends = [filters.OrderingFilter, filters.SearchFilter]
     ordering_fields = [
         'likes_count',
+        'saved_count',
         'comments_count',
         ]
     search_fields = [
