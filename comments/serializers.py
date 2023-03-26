@@ -6,9 +6,9 @@ from .models import Comment
 class CommentSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
-    accounts_id = serializers.ReadOnlyField(source='owner.accounts.id')
+    accounts_id = serializers.ReadOnlyField(source='owner.account.id')
     profile_image = serializers.ReadOnlyField(
-        source='owner.accounts.profile_image.url')
+        source='owner.account.profile_image.url')
     created_date = serializers.SerializerMethodField()
     updated_date = serializers.SerializerMethodField()
 
