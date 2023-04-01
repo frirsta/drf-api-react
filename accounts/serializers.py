@@ -26,7 +26,7 @@ class AccountsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Account
-        fields = ['owner', 'id', 'registration_date',
+        fields = ['owner', 'id', 'created_date',
                   'updated_date', 'bio', 'profile_image', 'is_owner',
                   'posts_count', 'followed_count',
                   'following_count', 'following_id'

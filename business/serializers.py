@@ -18,6 +18,6 @@ class BusinessProfileSerializer(serializers.ModelSerializer):
         model = BusinessProfile
         fields = ['id', 'owner', 'is_owner', 'business_name',
                   'profile_id', 'profile_image', 'business_description',
-                  'phone_number', 'registration_date', 'updated_date',
+                  'phone_number', 'created_date', 'updated_date',
                   'business_image'
                   ]

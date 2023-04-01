@@ -18,12 +18,12 @@ class AccountList(generics.ListAPIView):
         following_count=Count(
             'owner__following', distinct=True),
         followed_count=Count('owner__followed', distinct=True)
-    ).order_by('-registration_date')
+    ).order_by('-created_date')
     serializer_class = AccountsSerializer
     filter_backends = [
         filters.OrderingFilter,
         filters.SearchFilter,
-        DjangoFilterBackend
+        DjangoFilterBackend,
         ]
     ordering_fields = [
         'posts_count',
@@ -48,5 +48,5 @@ class AccountDetail(generics.RetrieveUpdateAPIView):
         following_count=Count(
             'owner__followed', distinct=True),
         followed_count=Count('owner__followed', distinct=True)
-    ).order_by('-registration_date')
+    ).order_by('-created_date')
     serializer_class = AccountsSerializer
