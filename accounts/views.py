@@ -46,7 +46,7 @@ class AccountDetail(generics.RetrieveUpdateAPIView):
     queryset = Account.objects.annotate(
         posts_count=Count('owner__post', distinct=True),
         following_count=Count(
-            'owner__followed', distinct=True),
+            'owner__following', distinct=True),
         followed_count=Count('owner__followed', distinct=True)
     ).order_by('-created_date')
     serializer_class = AccountsSerializer
