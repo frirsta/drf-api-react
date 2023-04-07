@@ -23,9 +23,12 @@ class PostList(generics.ListCreateAPIView):
     filterset_fields = [
         'likes__owner__account',
         'saved__owner__account',
+        'owner__account',
+        'owner__followed__owner__account',
     ]
     ordering_fields = [
         'likes_count',
+        'likes__created_date',
         'saved_count',
         'comments_count',
     ]
