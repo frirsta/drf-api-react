@@ -58,6 +58,10 @@ The front-end application is connected to Snap it's API.
 <br>
 
 # Testing
+## [Python Validation](https://pep8ci.herokuapp.com/)
+The code passed the pep8 validation.
+There were 4 small errors found in the settings.py that cannot be fixed and there is no need for them to be fixed.
+
 <img src="assets/readme/test_fail.png" alt="post test fail" style="width: 50%" > 
 <img src="assets/readme/test_pass.png" alt="post test pass" style="width: 50%" > 
 
