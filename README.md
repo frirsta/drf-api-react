@@ -145,12 +145,77 @@ This website was deployed to [Heroku](https://heroku.com/). To deploy the websit
 
 <br>
 
+# Cloning
+
+1. Open the GitHub repository. 
+
+2. Click the green 'Code' button and copy the given URL.
+
+3. Open Git Bash and change directory to where you want the cloned directory.
+
+4. Write: 
+<pre>
+"git clone"
+</pre> 
+, and paste the URL that was copied in Github and then click 'enter'.
+
+<br>
+
+5. In Git Bash locate the cloned directory.
+
+6. Type:
+<pre> "code ."
+</pre>
+This will launch the project in VSCode.
+
+<br>
+
+7. Now install the requirements needed to run the project by typing this command: 
+<pre>
+"pip3 install -r requirements.txt".
+</pre>
+
+<br>
+
+8. Create an 'env.py' file in the top level directory. Add the following code and their values:
+<pre>
+import os
+
+os.environ['CLOUDINARY_URL'] = 'your cloudinary url'
+os.environ['DATABASE_URL'] = 'your database url'
+os.environ['SECRET_KEY'] = 'your secret key'
+</pre>
+
+<br>
+
+9. Add the variables from the env.py file in Herokus Config Vars when it is time for deployment.
+
+
+10. Now run this command:
+<pre>
+"python manage.py migrate"
+</pre> 
+
+11. Run this command:
+<pre>
+"python manage.py runserver"
+</pre>
+
+If everything is working as expected the project will launch and be ready for development.
+
 # Credits
+
+Sources that have helped build the website:
+Default profile image:
 <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Freepik - Flaticon</a>
+
+Default post image:
 <a href="https://www.flaticon.com/free-icons/picture" title="picture icons">Picture icons created by Chanut - Flaticon</a>
+
 https://www.django-rest-framework.org/api-guide/filtering/#searchfilter
-<a href="https://www.flaticon.com/free-icons/creation" title="creation icons">Creation icons created by Freepik - Flaticon</a>
 
 <br>
 
 # Acknowledgement
+This website has been made for my 5th Portfolio Project (Advanced Front-end) - Diploma in Full Stack Software Development at [Code Institute](https://codeinstitute.net/).
+I would like to thank my mentor PGareth McGirr from Code Institute who helped me develop the website with feedback through the project.
