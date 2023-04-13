@@ -1,6 +1,4 @@
-# React project
-
-<br>
+# Snap it API (Django Rest Framework)
 
 * [**Project**](<#project>)
 * [**Project Management**](<#project-management>)
@@ -16,6 +14,26 @@
 * [**Credits**](<#credits>)
 * [**Acknowledgement**](<#acknowledgement>)
 
+
+# Project
+Welcome to Snap it's API. This API is the connection between the front-end and the back-end of the Snap it application. The API is created with Django REST Framework. 
+
+[Front-end live link](https://front-end-react.herokuapp.com/)
+<br>
+
+[Front-end repository](https://github.com/frirsta/react-front-end)
+
+The front-end application is connected to Snap it's API.
+
+[Back-end API repository](https://github.com/frirsta/drf-api-react)
+<br>
+
+[Back-end API deployment](https://drf-api-frirsta.herokuapp.com/)
+
+
+<br>
+
+
 <br>
 
 # Project
@@ -26,65 +44,8 @@
 
 <br>
 
-# Wireframes
-
-### I have used [Miro](https://miro.com/) to create WireFrames for the project.
-
-<details><summary>Wireframes</summary>
-
-<details><summary>Home page</summary>
-<img src="readme/wireframes/home.jpg" alt="Home page desktop screen" style="width: 45%;">
-<img src="readme/wireframes/home_mobile_tablet.jpg" alt="Home page mobile and tablet screen" style="width: 45%;">
-<img src="readme/wireframes/home_mobile_tablet_full_screen.jpg" alt="Home page full screen mobile and tablet screen" style="width: 45%;">
-</details>
-
-<details><summary>Post detail</summary>
-<img src="readme/wireframes/post_detail.jpg" alt="Post detail page on mobile, tablet and desktop screen">
-</details>
-
-<details><summary>Signup</summary>
-<img src="readme/wireframes/signup.jpg" alt="Sign up page on mobile, tablet and desktop screen">
-</details>
-
-<details><summary>Sign in</summary>
-<img src="readme/wireframes/signin.jpg" alt="Sign in page on mobile, tablet and desktop screen">
-</details>
-
-<details><summary>Upload</summary>
-<img src="readme/wireframes/upload.jpg" alt="Upload page on mobile, tablet and desktop screen">
-</details>
-
-
-<details><summary>profile page from another users view</summary>
-<img src="readme/wireframes/profile_user_view.jpg" alt="Profile page from other users view on mobile, tablet and desktop screen">
-</details>
-
-
-<details><summary>profile</summary>
-<img src="readme/wireframes/profile.jpg" alt="Profile page on mobile, tablet and desktop screen">
-</details>
-
-<details><summary>Edit profile</summary>
-<img src="readme/wireframes/edit_profile.jpg" alt="Edit profile page on mobile, tablet and desktop screen">
-</details>
-
-<details><summary>Change username</summary>
-<img src="readme/wireframes/change_username.jpg" alt="Change username page on mobile, tablet and desktop screen">
-</details>
-
-<details><summary>Liked posts</summary>
-<img src="readme/wireframes/liked_posts.jpg" alt="Liked posts page on mobile, tablet and desktop screen">
-</details>
-
-<details><summary>Buisness profile</summary>
-<img src="readme/wireframes/buisness_profile.jpg" alt="Buisness profile page on mobile, tablet and desktop screen">
-</details>
-
-</details>
-
-<br>
-
-# User Experience UX
+# Database model
+<img src="assets/readme/database_model.png" alt="database model" > 
 
 <br>
 
@@ -97,11 +58,20 @@
 <br>
 
 # Testing
+<img src="assets/readme/test_fail.png" alt="post test fail" style="width: 50%" > 
+<img src="assets/readme/test_pass.png" alt="post test pass" style="width: 50%" > 
 
 <br>
 
 # Technologies used
+* Python - For functionality of the website
+* Django - Model-View-Template framework
+Git 
+* GitHub - Used to host the website
+* GitPod - For deployment of the website
+* [Miro](https://miro.com/) - For creating the Wireframes
 
+<img src="assets/readme/technologies.png" alt="post test pass" > 
 
 django-admin startproject PROJ_NAME .
 djangorestframework django-cors-headers
@@ -130,6 +100,15 @@ pip freeze --local > requirements.txt
 
 <br>
 
+# Database/Hosting
+* Heroku - The platform where the application is deployed
+Gunicorn
+Cloudinary
+Pillow
+Psycopg2
+PostgreSQL
+PyJWT
+
 # Bugs
 
 <br>
@@ -139,6 +118,26 @@ pip freeze --local > requirements.txt
 <br>
 
 # Deployment
+
+This website was deployed to [Heroku](https://heroku.com/). To deploy the website follow the steps below:
+
+1. Log in or create an account on heroku.
+
+2. On the heroku Website click 'New' and after click 'Create new app'.
+
+3. Write the app name, choose a region and then click 'Create app'. 
+
+4. In the application website click 'Deploy' on the navigation menu.
+
+5.  In the 'Deploy' page, click the GitHub logo. Search for the GitHub repository that was made for this project.
+
+6. Search for the GitHub repository that was made for this project.
+
+7. When the repository is found click 'Connect'.
+
+8. Scroll down to manual deploy and make sure you have chosen the main branch.
+
+9. Click deploy.
 
 <br>
 
