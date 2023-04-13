@@ -77,29 +77,21 @@ Git
 
 <img src="assets/readme/technologies.png" alt="post test pass" > 
 
-django-admin startproject PROJ_NAME .
-djangorestframework django-cors-headers
-pip freeze > requirements.txt
-django-admin startproject name .
-pip install django-filter
-pip install dj-rest-auth
-pip install 'dj-rest-auth[with_social]'
-pip install djangorestframework-simplejwt
-pip install djangorestframework
-pip install django-cloudinary-storage
-pip install Pillow
-pip install ‘django<4’
-pip install "django-phonenumber-field[phonenumberslite]"
-pip3 install dj_database_url==0.5.0 psycopg2
-pip3 install gunicorn django-cors-headers
-pip install django-rest-auth[with_social]
-
-
-SQLite
-
-pip3 install dj-rest-auth==2.1.9
-
-pip freeze --local > requirements.txt
+## Libraries and other resources
+[Django](https://www.djangoproject.com/) Python framework for fast development and clean design.
+[Django REST Framework](https://www.django-rest-framework.org/) A toolkit for building Web APIs.
+[Django AllAuth](https://django-allauth.readthedocs.io/en/latest/) Authentication, registration, account management and 3rd party account authentication.
+[Django Cloudinary Storage](https://pypi.org/project/django-cloudinary-storage/) Provides Cloudinary storages for media and static files.
+[Django Cors Headers](https://pypi.org/project/django-cors-headers/) Is an application for handling the server headers required for Cross-Origin Resources Sharing
+[Django filter](https://django-filter.readthedocs.io/en/stable/) Allows user to filter down a queryset based on a model's fields, displaying the form to let them do this.
+[dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/) Provides a set of REST API endpoints, to handle user registration and authentication tasks.
+[dj-rest-auth with_social](https://dj-rest-auth.readthedocs.io/en/latest/installation.html#social-authentication-optional) Provides classes for creating a social media authentication view.
+[djangorestframework-simplejwt](https://pypi.org/project/djangorestframework-simplejwt/) JSON Web Token authentication plugin for Django REST Framework.
+[Pillow](https://pypi.org/project/Pillow/) Imaging Library.
+[Django phonenumber field](https://django-phonenumber-field.readthedocs.io/en/latest/index.html) Validate and convert phone numbers.
+[Dj database URL](https://pypi.org/project/dj-database-url/) Use Database URLs in Django Application.
+[Psycopg2](https://pypi.org/project/psycopg2/) Python PostgreSQL Database Adapter.
+[gunicorn](https://gunicorn.org/) Allows to run Python applications by running multiple Python processes within a single dyno.
 
 
 <br>
@@ -212,7 +204,8 @@ Default profile image:
 Default post image:
 <a href="https://www.flaticon.com/free-icons/picture" title="picture icons">Picture icons created by Chanut - Flaticon</a>
 
-https://www.django-rest-framework.org/api-guide/filtering/#searchfilter
+[Django REST Framework documentation](https://www.django-rest-framework.org/)
+[Stack Overflow](https://stackoverflow.com/)
 
 <br>
 
