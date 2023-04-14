@@ -3,12 +3,11 @@
 * [**Project**](<#project>)
 * [**Project Management**](<#project-management>)
 * [**Database model**](<#database-model>)
-* [**Features**](<#features>)
+* [**API endpoints**](<#api-endpoints>)
 * [**Future Features**](<#future-features>)
 * [**Testing**](<#testing>)
 * [**Technologies Used**](<#technologies-used>)
 * [**Bugs**](<#bugs>)
-* [**Unfixed Bugs**](<#unfixed-bugs>)
 * [**Deployment**](<#deployment>)
 * [**Credits**](<#credits>)
 * [**Acknowledgement**](<#acknowledgement>)
@@ -66,9 +65,47 @@ I have used the github project board to work with Snap it.
 
 <br>
 
-# Features
+# API Endpoints
+Accounts:
+Endpoint:/accounts/
+Endpoint:/accounts/int:pk/
+Methods:
 
-<br>
+Business
+Endpoint:/business/
+Endpoint:/business/int:pk/
+Methods:
+
+Comments
+Endpoint:/comments/int:pk/
+Methods:
+Endpoint:/comments/
+
+Contact
+Endpoint:/contact/
+Endpoint:/contact/int:pk/
+Methods:
+
+Followers
+Endpoint:/followers/
+Endpoint:/followers/int:pk/
+Methods:
+
+Likes
+Endpoint:/likes/
+Endpoint:/likes/int:pk/
+Methods:
+
+Posts
+Endpoint:/posts/
+Endpoint:/posts/int:pk/
+Methods:
+
+Saved Posts
+Endpoint:/saved/
+Endpoint:/saved/int:pk/
+Methods:
+
 
 # Future Features
 
