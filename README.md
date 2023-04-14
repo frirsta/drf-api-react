@@ -2,8 +2,7 @@
 
 * [**Project**](<#project>)
 * [**Project Management**](<#project-management>)
-* [**Wireframes**](<#wireframes>)
-* [**User Experience UX**](<#user-experience-ux>)
+* [**Database model**](<#database-model>)
 * [**Features**](<#features>)
 * [**Future Features**](<#future-features>)
 * [**Testing**](<#testing>)
@@ -192,14 +191,16 @@ If everything is working as expected the project will launch and be ready for de
 # Credits
 
 Sources that have helped build the website:
+
+[Django REST Framework documentation](https://www.django-rest-framework.org/)
+
+[Stack Overflow](https://stackoverflow.com/)
+
 Default profile image:
 <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Freepik - Flaticon</a>
 
 Default post image:
 <a href="https://www.flaticon.com/free-icons/picture" title="picture icons">Picture icons created by Chanut - Flaticon</a>
-
-[Django REST Framework documentation](https://www.django-rest-framework.org/)
-[Stack Overflow](https://stackoverflow.com/)
 
 <br>
 
