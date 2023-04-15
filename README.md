@@ -47,7 +47,7 @@ The Won't have label is for long term use in the project and has not been used i
 
 GitHub Issues
 <br>
-<img src="assets/readme/isuess.png" alt="github Issues" style="width: 50%">
+<img src="assets/readme/issues.png" alt="github Issues" style="width: 50%">
 
 <br>
 
