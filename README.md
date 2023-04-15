@@ -66,46 +66,71 @@ I have used the github project board to work with Snap it.
 <br>
 
 # API Endpoints
+<br>
+
 Accounts:
+<br>
 Endpoint:/accounts/
+<br>
 Endpoint:/accounts/int:pk/
-Methods:
 
-Business
+<br>
+
+Business:
+<br>
 Endpoint:/business/
+<br>
 Endpoint:/business/int:pk/
-Methods:
 
-Comments
+<br>
+
+Comments:
+<br>
 Endpoint:/comments/int:pk/
-Methods:
+<br>
 Endpoint:/comments/
 
-Contact
+<br>
+
+Contact:
+<br>
 Endpoint:/contact/
+<br>
 Endpoint:/contact/int:pk/
-Methods:
 
-Followers
+<br>
+
+Followers:
+<br>
 Endpoint:/followers/
+<br>
 Endpoint:/followers/int:pk/
-Methods:
 
-Likes
+<br>
+
+Likes:
+<br>
 Endpoint:/likes/
+<br>
 Endpoint:/likes/int:pk/
-Methods:
 
-Posts
+<br>
+
+Posts:
+<br>
 Endpoint:/posts/
+<br>
 Endpoint:/posts/int:pk/
-Methods:
 
-Saved Posts
+<br>
+
+Saved Posts:
+<br>
 Endpoint:/saved/
+<br>
 Endpoint:/saved/int:pk/
-Methods:
 
+<br>
 
 # Future Features
 
