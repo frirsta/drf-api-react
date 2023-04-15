@@ -122,21 +122,18 @@ There were 4 small errors found in the settings.py that cannot be fixed and ther
 <br>
 
 # Technologies used
-* Python - For functionality of the website
-* Django - Model-View-Template framework
-Git 
-* GitHub - Used to host the website
-* GitPod - For deployment of the website
+* [Python](https://www.python.org/) - For functionality of the website
+* [Django](https://www.djangoproject.com/) - Python framework for fast development and clean design.
+* [Django REST Framework](https://www.django-rest-framework.org/) - A toolkit for building Web APIs.
+* [Git](https://git-scm.com/) - Version control 
+* [GitHub](https://github.com/) - Used to host the website
+* [GitPod](https://www.gitpod.io/) - For deployment of the website
 * [Miro](https://miro.com/) - For creating the Wireframes
+* [Heroku](heroku.com) - The platform where the application is deployed.
 
-<img src="assets/readme/technologies.png" alt="post test pass" > 
+<img src="assets/readme/technologies.png" alt="list of resources" > 
 
 ## Libraries and other resources
- * [Heroku](heroku.com) - The platform where the application is deployed.
- * [PostgreSQL](https://www.elephantsql.com/) Databases.
- * [PyJWT](https://pyjwt.readthedocs.io/en/stable/) Encode and decode JSON Web Tokens.
- * [Django](https://www.djangoproject.com/) Python framework for fast development and clean design.
- * [Django REST Framework](https://www.django-rest-framework.org/) A toolkit for building Web APIs.
  * [Django AllAuth](https://django-allauth.readthedocs.io/en/latest/) Authentication, registration, account management and 3rd party account authentication.
  * [Django Cloudinary Storage](https://pypi.org/project/django-cloudinary-storage/) Provides Cloudinary storages for media and static files.
  * [Django Cors Headers](https://pypi.org/project/django-cors-headers/) Is an application for handling the server headers required for Cross-Origin Resources Sharing
@@ -144,11 +141,13 @@ Git
  * [dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/) Provides a set of REST API endpoints, to handle user registration and authentication tasks.
  * [dj-rest-auth with_social](https://dj-rest-auth.readthedocs.io/en/latest/installation.html#social-authentication-optional) Provides classes for creating a social media authentication view.
  * [djangorestframework-simplejwt](https://pypi.org/project/djangorestframework-simplejwt/) JSON Web Token authentication plugin for Django REST Framework.
- * [Pillow](https://pypi.org/project/Pillow/) Imaging Library.
  * [Django phonenumber field](https://django-phonenumber-field.readthedocs.io/en/latest/index.html) Validate and convert phone numbers.
  * [Dj database URL](https://pypi.org/project/dj-database-url/) Use Database URLs in Django Application.
- * [Psycopg2](https://pypi.org/project/psycopg2/) Python PostgreSQL Database Adapter.
  * [gunicorn](https://gunicorn.org/) Allows to run Python applications by running multiple Python processes within a single dyno.
+ * [Pillow](https://pypi.org/project/Pillow/) Imaging Library.
+ * [PostgreSQL](https://www.elephantsql.com/) Databases.
+ * [Psycopg2](https://pypi.org/project/psycopg2/) Python PostgreSQL Database Adapter.
+ * [PyJWT](https://pyjwt.readthedocs.io/en/stable/) Encode and decode JSON Web Tokens.
 
 
 <br>
