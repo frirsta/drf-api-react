@@ -58,7 +58,6 @@ I have used the github project board to work with Snap it.
 
 <br>
 
-<br>
 
 # Database model
 <img src="assets/readme/database_model.png" alt="database model" > 
@@ -181,10 +180,6 @@ There were 4 small errors found in the settings.py that cannot be fixed and ther
 
 <br>
 
-# Unfixed Bugs
-
-<br>
-
 # Deployment
 
 This website was deployed to [Heroku](https://heroku.com/). To deploy the website follow the steps below:
@@ -285,4 +280,4 @@ Default post image:
 
 # Acknowledgement
 This website has been made for my 5th Portfolio Project (Advanced Front-end) - Diploma in Full Stack Software Development at [Code Institute](https://codeinstitute.net/).
-I would like to thank my mentor PGareth McGirr from Code Institute who helped me develop the website with feedback through the project.
+I would like to thank my mentor Gareth McGirr from Code Institute who helped me develop the website with feedback through the project.
