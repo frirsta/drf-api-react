@@ -20,7 +20,7 @@ class BusinessProfileList(generics.ListCreateAPIView):
     search_fields = ['owner__username']
 
     def perform_create(self, serializer):
-        serializer.save(owner.self.request.user)
+        serializer.save(owner=self.request.user)
 
 
 class BusinessProfileDetail(generics.RetrieveUpdateAPIView):
